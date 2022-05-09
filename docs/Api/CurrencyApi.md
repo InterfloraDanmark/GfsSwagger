@@ -4,7 +4,7 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**currencyGetTranslatedCurrencies**](CurrencyApi.md#currencyGetTranslatedCurrencies) | **GET** /v1/currency/{country}/{language} | Get translated currencies and rates, according to client IP&#39;s country and receiving country
+[**currencyGetTranslatedCurrencies**](CurrencyApi.md#currencyGetTranslatedCurrencies) | **GET** /v3/currency/{country}/{language} | Get translated currencies and rates, according to client IP&#39;s country and receiving country
 
 
 # **currencyGetTranslatedCurrencies**

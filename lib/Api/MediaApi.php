@@ -231,7 +231,7 @@ class MediaApi
             );
         }
 
-        $resourcePath = '/v1/media/{mediaID}';
+        $resourcePath = '/v3/media/{mediaID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -504,7 +504,7 @@ class MediaApi
             );
         }
 
-        $resourcePath = '/v1/media/{mediaID}';
+        $resourcePath = '/v3/media/{mediaID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -777,7 +777,7 @@ class MediaApi
             );
         }
 
-        $resourcePath = '/v1/media';
+        $resourcePath = '/v3/media';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

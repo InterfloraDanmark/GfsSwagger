@@ -4,8 +4,8 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**categoryGetAll**](CategoryApi.md#categoryGetAll) | **GET** /v1/category | Get all product categories
-[**categoryGetById**](CategoryApi.md#categoryGetById) | **GET** /v1/category/{categoryID} | Get product category by ID
+[**categoryGetAll**](CategoryApi.md#categoryGetAll) | **GET** /v3/category | Get all product categories
+[**categoryGetById**](CategoryApi.md#categoryGetById) | **GET** /v3/category/{categoryID} | Get product category by ID
 
 
 # **categoryGetAll**

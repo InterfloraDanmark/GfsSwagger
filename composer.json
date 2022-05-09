@@ -10,7 +10,7 @@
     "homepage": "https://github.com/InterfloraDanmark/GfsSwagger",
     "license": "proprietary",
     "require": {
-        "php": ">=5.5",
+        "php": ">=7.4",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",

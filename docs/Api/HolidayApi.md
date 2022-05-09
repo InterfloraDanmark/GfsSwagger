@@ -4,10 +4,10 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**holidayDelete**](HolidayApi.md#holidayDelete) | **DELETE** /v1/holiday/{holidayID} | Delete holiday
-[**holidayGetByCountry**](HolidayApi.md#holidayGetByCountry) | **GET** /v1/holiday/country/{countryCode} | Get holidays by country
-[**holidayGetById**](HolidayApi.md#holidayGetById) | **GET** /v1/holiday/{id} | Get holiday by ID
-[**holidaySave**](HolidayApi.md#holidaySave) | **POST** /v1/holiday | Save holiday
+[**holidayDelete**](HolidayApi.md#holidayDelete) | **DELETE** /v3/holiday/{holidayID} | Delete holiday
+[**holidayGetByCountry**](HolidayApi.md#holidayGetByCountry) | **GET** /v3/holiday/country/{countryCode} | Get holidays by country
+[**holidayGetById**](HolidayApi.md#holidayGetById) | **GET** /v3/holiday/{id} | Get holiday by ID
+[**holidaySave**](HolidayApi.md#holidaySave) | **POST** /v3/holiday | Save holiday
 
 
 # **holidayDelete**

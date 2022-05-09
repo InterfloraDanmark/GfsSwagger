@@ -4,9 +4,9 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**countryGetAll**](CountryApi.md#countryGetAll) | **GET** /v1/country | Get all countries
-[**countryGetById**](CountryApi.md#countryGetById) | **GET** /v1/country/{countryID} | Get country by ID
-[**countryGetByUnit**](CountryApi.md#countryGetByUnit) | **GET** /v1/country/unit/{unitID} | Get countries of a unit
+[**countryGetAll**](CountryApi.md#countryGetAll) | **GET** /v3/country | Get all countries
+[**countryGetById**](CountryApi.md#countryGetById) | **GET** /v3/country/{countryID} | Get country by ID
+[**countryGetByUnit**](CountryApi.md#countryGetByUnit) | **GET** /v3/country/unit/{unitID} | Get countries of a unit
 
 
 # **countryGetAll**

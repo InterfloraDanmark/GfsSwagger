@@ -257,7 +257,7 @@ class CategoryApi
     protected function categoryGetAllRequest()
     {
 
-        $resourcePath = '/v1/category';
+        $resourcePath = '/v3/category';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -522,7 +522,7 @@ class CategoryApi
             );
         }
 
-        $resourcePath = '/v1/category/{categoryID}';
+        $resourcePath = '/v3/category/{categoryID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

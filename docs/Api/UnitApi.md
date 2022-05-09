@@ -4,8 +4,8 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**unitGetAll**](UnitApi.md#unitGetAll) | **GET** /v1/unit | Get all units
-[**unitGetById**](UnitApi.md#unitGetById) | **GET** /v1/unit/{unitID} | Get unit by ID
+[**unitGetAll**](UnitApi.md#unitGetAll) | **GET** /v3/unit | Get all units
+[**unitGetById**](UnitApi.md#unitGetById) | **GET** /v3/unit/{unitID} | Get unit by ID
 
 
 # **unitGetAll**

@@ -231,7 +231,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/confirm';
+        $resourcePath = '/v3/message/confirm';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -499,7 +499,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/get';
+        $resourcePath = '/v3/message/get';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -767,7 +767,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/get/extendedOrderItem';
+        $resourcePath = '/v3/message/get/extendedOrderItem';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1035,7 +1035,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/confirmbackcharge';
+        $resourcePath = '/v3/message/send/confirmbackcharge';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1303,7 +1303,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/denybackcharge';
+        $resourcePath = '/v3/message/send/denybackcharge';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1571,7 +1571,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/backcharge';
+        $resourcePath = '/v3/message/send/backcharge';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1839,7 +1839,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/confirmdelivery';
+        $resourcePath = '/v3/message/send/confirmdelivery';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2107,7 +2107,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/cancelfloralcheque';
+        $resourcePath = '/v3/message/send/cancelfloralcheque';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2375,7 +2375,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/floralcheque';
+        $resourcePath = '/v3/message/send/floralcheque';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2643,7 +2643,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/general';
+        $resourcePath = '/v3/message/send/general';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2911,7 +2911,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/confirmcancelorder';
+        $resourcePath = '/v3/message/send/confirmcancelorder';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3179,7 +3179,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/denycancelorder';
+        $resourcePath = '/v3/message/send/denycancelorder';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3447,7 +3447,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/cancelorder';
+        $resourcePath = '/v3/message/send/cancelorder';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3715,7 +3715,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/order';
+        $resourcePath = '/v3/message/send/order';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3983,7 +3983,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/rejectorder';
+        $resourcePath = '/v3/message/send/rejectorder';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4251,7 +4251,7 @@ class MessageApi
             );
         }
 
-        $resourcePath = '/v1/message/send/query';
+        $resourcePath = '/v3/message/send/query';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

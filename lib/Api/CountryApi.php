@@ -257,7 +257,7 @@ class CountryApi
     protected function countryGetAllRequest()
     {
 
-        $resourcePath = '/v1/country';
+        $resourcePath = '/v3/country';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -522,7 +522,7 @@ class CountryApi
             );
         }
 
-        $resourcePath = '/v1/country/{countryID}';
+        $resourcePath = '/v3/country/{countryID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -795,7 +795,7 @@ class CountryApi
             );
         }
 
-        $resourcePath = '/v1/country/unit/{unitID}';
+        $resourcePath = '/v3/country/unit/{unitID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -268,7 +268,7 @@ class CountryInfoTextApi
             );
         }
 
-        $resourcePath = '/v1/countryinfo/country/{countryCode}';
+        $resourcePath = '/v3/countryinfo/country/{countryCode}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -552,7 +552,7 @@ class CountryInfoTextApi
             );
         }
 
-        $resourcePath = '/v1/countryinfo/country/{countryCode}/type/{type}';
+        $resourcePath = '/v3/countryinfo/country/{countryCode}/type/{type}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -844,7 +844,7 @@ class CountryInfoTextApi
             );
         }
 
-        $resourcePath = '/v1/countryinfo/country/{countryCode}';
+        $resourcePath = '/v3/countryinfo/country/{countryCode}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1120,7 +1120,7 @@ class CountryInfoTextApi
             );
         }
 
-        $resourcePath = '/v1/countryinfo';
+        $resourcePath = '/v3/countryinfo';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
