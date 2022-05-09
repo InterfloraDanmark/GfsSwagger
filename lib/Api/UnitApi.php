@@ -257,7 +257,7 @@ class UnitApi
     protected function unitGetAllRequest()
     {
 
-        $resourcePath = '/v1/unit';
+        $resourcePath = '/v3/unit';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -522,7 +522,7 @@ class UnitApi
             );
         }
 
-        $resourcePath = '/v1/unit/{unitID}';
+        $resourcePath = '/v3/unit/{unitID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

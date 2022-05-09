@@ -231,7 +231,7 @@ class MemberApi
             );
         }
 
-        $resourcePath = '/v1/member/{memberID}';
+        $resourcePath = '/v3/member/{memberID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -504,7 +504,7 @@ class MemberApi
             );
         }
 
-        $resourcePath = '/v1/member/country/{countryCode}';
+        $resourcePath = '/v3/member/country/{countryCode}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -777,7 +777,7 @@ class MemberApi
             );
         }
 
-        $resourcePath = '/v1/member/{memberID}';
+        $resourcePath = '/v3/member/{memberID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1050,7 +1050,7 @@ class MemberApi
             );
         }
 
-        $resourcePath = '/v1/member';
+        $resourcePath = '/v3/member';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

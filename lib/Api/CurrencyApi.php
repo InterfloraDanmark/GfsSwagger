@@ -279,7 +279,7 @@ class CurrencyApi
             );
         }
 
-        $resourcePath = '/v1/currency/{country}/{language}';
+        $resourcePath = '/v3/currency/{country}/{language}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

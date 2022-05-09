@@ -4,10 +4,10 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**countryInfoTextGetTranslatedCountryInfoTexts**](CountryInfoTextApi.md#countryInfoTextGetTranslatedCountryInfoTexts) | **GET** /v1/countryinfo/country/{countryCode} | Get translated country info texts for one country.
-[**countryInfoTextGetTranslatedCountryInfoTextsByType**](CountryInfoTextApi.md#countryInfoTextGetTranslatedCountryInfoTextsByType) | **GET** /v1/countryinfo/country/{countryCode}/type/{type} | Get the translated country info text for one country of requested info text type.
-[**countryInfoTextReplaceCountryInfoTexts**](CountryInfoTextApi.md#countryInfoTextReplaceCountryInfoTexts) | **POST** /v1/countryinfo/country/{countryCode} | Replace translated country info texts.
-[**countryInfoTextSaveCountryInfoText**](CountryInfoTextApi.md#countryInfoTextSaveCountryInfoText) | **POST** /v1/countryinfo | Update or save a single translated country info text by country and type, leaving other types of same country untouched.
+[**countryInfoTextGetTranslatedCountryInfoTexts**](CountryInfoTextApi.md#countryInfoTextGetTranslatedCountryInfoTexts) | **GET** /v3/countryinfo/country/{countryCode} | Get translated country info texts for one country.
+[**countryInfoTextGetTranslatedCountryInfoTextsByType**](CountryInfoTextApi.md#countryInfoTextGetTranslatedCountryInfoTextsByType) | **GET** /v3/countryinfo/country/{countryCode}/type/{type} | Get the translated country info text for one country of requested info text type.
+[**countryInfoTextReplaceCountryInfoTexts**](CountryInfoTextApi.md#countryInfoTextReplaceCountryInfoTexts) | **POST** /v3/countryinfo/country/{countryCode} | Replace translated country info texts.
+[**countryInfoTextSaveCountryInfoText**](CountryInfoTextApi.md#countryInfoTextSaveCountryInfoText) | **POST** /v3/countryinfo | Update or save a single translated country info text by country and type, leaving other types of same country untouched.
 
 
 # **countryInfoTextGetTranslatedCountryInfoTexts**

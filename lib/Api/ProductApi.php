@@ -231,7 +231,7 @@ class ProductApi
             );
         }
 
-        $resourcePath = '/v1/product/{productID}';
+        $resourcePath = '/v3/product/{productID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -493,7 +493,7 @@ class ProductApi
     protected function productGetAllRequest()
     {
 
-        $resourcePath = '/v1/product';
+        $resourcePath = '/v3/product';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -758,7 +758,7 @@ class ProductApi
             );
         }
 
-        $resourcePath = '/v1/product/country/{countryCode}';
+        $resourcePath = '/v3/product/country/{countryCode}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1031,7 +1031,7 @@ class ProductApi
             );
         }
 
-        $resourcePath = '/v1/product/{productID}';
+        $resourcePath = '/v3/product/{productID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1304,7 +1304,7 @@ class ProductApi
             );
         }
 
-        $resourcePath = '/v1/product';
+        $resourcePath = '/v3/product';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

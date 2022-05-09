@@ -231,7 +231,7 @@ class RegionApi
             );
         }
 
-        $resourcePath = '/v1/region/{regionID}';
+        $resourcePath = '/v3/region/{regionID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -504,7 +504,7 @@ class RegionApi
             );
         }
 
-        $resourcePath = '/v1/region/country/{countryCode}';
+        $resourcePath = '/v3/region/country/{countryCode}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -777,7 +777,7 @@ class RegionApi
             );
         }
 
-        $resourcePath = '/v1/region/{regionID}';
+        $resourcePath = '/v3/region/{regionID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1050,7 +1050,7 @@ class RegionApi
             );
         }
 
-        $resourcePath = '/v1/region';
+        $resourcePath = '/v3/region';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

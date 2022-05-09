@@ -231,7 +231,7 @@ class HolidayApi
             );
         }
 
-        $resourcePath = '/v1/holiday/{holidayID}';
+        $resourcePath = '/v3/holiday/{holidayID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -504,7 +504,7 @@ class HolidayApi
             );
         }
 
-        $resourcePath = '/v1/holiday/country/{countryCode}';
+        $resourcePath = '/v3/holiday/country/{countryCode}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -777,7 +777,7 @@ class HolidayApi
             );
         }
 
-        $resourcePath = '/v1/holiday/{id}';
+        $resourcePath = '/v3/holiday/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1050,7 +1050,7 @@ class HolidayApi
             );
         }
 
-        $resourcePath = '/v1/holiday';
+        $resourcePath = '/v3/holiday';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

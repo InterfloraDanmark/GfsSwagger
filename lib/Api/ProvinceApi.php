@@ -231,7 +231,7 @@ class ProvinceApi
             );
         }
 
-        $resourcePath = '/v1/province/{provinceID}';
+        $resourcePath = '/v3/province/{provinceID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -504,7 +504,7 @@ class ProvinceApi
             );
         }
 
-        $resourcePath = '/v1/province/country/{countryCode}';
+        $resourcePath = '/v3/province/country/{countryCode}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -777,7 +777,7 @@ class ProvinceApi
             );
         }
 
-        $resourcePath = '/v1/province/{provinceID}';
+        $resourcePath = '/v3/province/{provinceID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1050,7 +1050,7 @@ class ProvinceApi
             );
         }
 
-        $resourcePath = '/v1/province';
+        $resourcePath = '/v3/province';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -4,11 +4,11 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**productDelete**](ProductApi.md#productDelete) | **DELETE** /v1/product/{productID} | Delete product
-[**productGetAll**](ProductApi.md#productGetAll) | **GET** /v1/product | Get all products
-[**productGetByCountry**](ProductApi.md#productGetByCountry) | **GET** /v1/product/country/{countryCode} | Get products of a country
-[**productGetById**](ProductApi.md#productGetById) | **GET** /v1/product/{productID} | Get product by ID
-[**productSave**](ProductApi.md#productSave) | **POST** /v1/product | Create or update product
+[**productDelete**](ProductApi.md#productDelete) | **DELETE** /v3/product/{productID} | Delete product
+[**productGetAll**](ProductApi.md#productGetAll) | **GET** /v3/product | Get all products
+[**productGetByCountry**](ProductApi.md#productGetByCountry) | **GET** /v3/product/country/{countryCode} | Get products of a country
+[**productGetById**](ProductApi.md#productGetById) | **GET** /v3/product/{productID} | Get product by ID
+[**productSave**](ProductApi.md#productSave) | **POST** /v3/product | Create or update product
 
 
 # **productDelete**
