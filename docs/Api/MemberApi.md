@@ -4,10 +4,10 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**memberDelete**](MemberApi.md#memberDelete) | **DELETE** /v3/member/{memberID} | Delete member
-[**memberGetByCountry**](MemberApi.md#memberGetByCountry) | **GET** /v3/member/country/{countryCode} | Get all members of a country
-[**memberGetById**](MemberApi.md#memberGetById) | **GET** /v3/member/{memberID} | Get member by ID
-[**memberSave**](MemberApi.md#memberSave) | **POST** /v3/member | Create or update member
+[**memberDelete**](MemberApi.md#memberDelete) | **DELETE** /v4/member/{memberID} | Delete member
+[**memberGetByCountry**](MemberApi.md#memberGetByCountry) | **GET** /v4/member/country/{countryCode} | Get all members of a country
+[**memberGetById**](MemberApi.md#memberGetById) | **GET** /v4/member/{memberID} | Get member by ID
+[**memberSave**](MemberApi.md#memberSave) | **POST** /v4/member | Create or update member
 
 
 # **memberDelete**

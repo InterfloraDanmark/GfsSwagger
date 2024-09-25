@@ -4,8 +4,8 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**categoryGetAll**](CategoryApi.md#categoryGetAll) | **GET** /v3/category | Get all product categories
-[**categoryGetById**](CategoryApi.md#categoryGetById) | **GET** /v3/category/{categoryID} | Get product category by ID
+[**categoryGetAll**](CategoryApi.md#categoryGetAll) | **GET** /v4/category | Get all product categories
+[**categoryGetById**](CategoryApi.md#categoryGetById) | **GET** /v4/category/{categoryID} | Get product category by ID
 
 
 # **categoryGetAll**
@@ -74,7 +74,7 @@ $apiInstance = new Swagger\Client\Api\CategoryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$category_id = 56; // int | 
+$category_id = 56; // int |
 
 try {
     $result = $apiInstance->categoryGetById($category_id);

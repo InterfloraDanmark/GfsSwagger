@@ -4,10 +4,10 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**regionDelete**](RegionApi.md#regionDelete) | **DELETE** /v3/region/{regionID} | Delete region
-[**regionGetByCountry**](RegionApi.md#regionGetByCountry) | **GET** /v3/region/country/{countryCode} | Get regions of a country
-[**regionGetById**](RegionApi.md#regionGetById) | **GET** /v3/region/{regionID} | Get region by ID
-[**regionSave**](RegionApi.md#regionSave) | **POST** /v3/region | Create or update region
+[**regionDelete**](RegionApi.md#regionDelete) | **DELETE** /v4/region/{regionID} | Delete region
+[**regionGetByCountry**](RegionApi.md#regionGetByCountry) | **GET** /v4/region/country/{countryCode} | Get regions of a country
+[**regionGetById**](RegionApi.md#regionGetById) | **GET** /v4/region/{regionID} | Get region by ID
+[**regionSave**](RegionApi.md#regionSave) | **POST** /v4/region | Create or update region
 
 
 # **regionDelete**

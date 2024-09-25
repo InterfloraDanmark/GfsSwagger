@@ -4,22 +4,22 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**messageConfirmMessages**](MessageApi.md#messageConfirmMessages) | **POST** /v3/message/confirm | Confirm messages
-[**messageGetMessages**](MessageApi.md#messageGetMessages) | **POST** /v3/message/get | Retrieve messages
-[**messageGetMessagesWithExtendedOrderItem**](MessageApi.md#messageGetMessagesWithExtendedOrderItem) | **POST** /v3/message/get/extendedOrderItem | Receive messages with extended order item. Responses containing messages of type &#39;OrderMessages&#39; include additional information about the ordered products.
-[**messageSendBackchargeConfirmationMessage**](MessageApi.md#messageSendBackchargeConfirmationMessage) | **POST** /v3/message/send/confirmbackcharge | Send backcharge confirmation
-[**messageSendBackchargeDeniedMessage**](MessageApi.md#messageSendBackchargeDeniedMessage) | **POST** /v3/message/send/denybackcharge | Send backcharge denial
-[**messageSendBackchargeMessage**](MessageApi.md#messageSendBackchargeMessage) | **POST** /v3/message/send/backcharge | Send backcharge message
-[**messageSendDeliveryConfirmedMessage**](MessageApi.md#messageSendDeliveryConfirmedMessage) | **POST** /v3/message/send/confirmdelivery | Send delivery confirmation
-[**messageSendFloralChequeCanceledMessage**](MessageApi.md#messageSendFloralChequeCanceledMessage) | **POST** /v3/message/send/cancelfloralcheque | Send floral cheque cancel message
-[**messageSendFloralChequeMessage**](MessageApi.md#messageSendFloralChequeMessage) | **POST** /v3/message/send/floralcheque | Send floral cheque message
-[**messageSendGeneralMessage**](MessageApi.md#messageSendGeneralMessage) | **POST** /v3/message/send/general | Send general message
-[**messageSendOrderCancelConfirmedMessage**](MessageApi.md#messageSendOrderCancelConfirmedMessage) | **POST** /v3/message/send/confirmcancelorder | Send order cancel confirmation message
-[**messageSendOrderCancelDeniedMessage**](MessageApi.md#messageSendOrderCancelDeniedMessage) | **POST** /v3/message/send/denycancelorder | Send order cancel denial message
-[**messageSendOrderCancelMessage**](MessageApi.md#messageSendOrderCancelMessage) | **POST** /v3/message/send/cancelorder | Send order cancellation message
-[**messageSendOrderMessage**](MessageApi.md#messageSendOrderMessage) | **POST** /v3/message/send/order | Send order message
-[**messageSendOrderRejectedMessage**](MessageApi.md#messageSendOrderRejectedMessage) | **POST** /v3/message/send/rejectorder | Send order rejected message
-[**messageSendQueryMessage**](MessageApi.md#messageSendQueryMessage) | **POST** /v3/message/send/query | Send query message
+[**messageConfirmMessages**](MessageApi.md#messageConfirmMessages) | **POST** /v4/message/confirm | Confirm messages
+[**messageGetMessages**](MessageApi.md#messageGetMessages) | **POST** /v4/message/get | Retrieve messages
+[**messageGetMessagesWithExtendedOrderItem**](MessageApi.md#messageGetMessagesWithExtendedOrderItem) | **POST** /v4/message/get/extendedOrderItem | Receive messages with extended order item. Responses containing messages of type &#39;OrderMessages&#39; include additional information about the ordered products.
+[**messageSendBackchargeConfirmationMessage**](MessageApi.md#messageSendBackchargeConfirmationMessage) | **POST** /v4/message/send/confirmbackcharge | Send backcharge confirmation
+[**messageSendBackchargeDeniedMessage**](MessageApi.md#messageSendBackchargeDeniedMessage) | **POST** /v4/message/send/denybackcharge | Send backcharge denial
+[**messageSendBackchargeMessage**](MessageApi.md#messageSendBackchargeMessage) | **POST** /v4/message/send/backcharge | Send backcharge message
+[**messageSendDeliveryConfirmedMessage**](MessageApi.md#messageSendDeliveryConfirmedMessage) | **POST** /v4/message/send/confirmdelivery | Send delivery confirmation
+[**messageSendFloralChequeCanceledMessage**](MessageApi.md#messageSendFloralChequeCanceledMessage) | **POST** /v4/message/send/cancelfloralcheque | Send floral cheque cancel message
+[**messageSendFloralChequeMessage**](MessageApi.md#messageSendFloralChequeMessage) | **POST** /v4/message/send/floralcheque | Send floral cheque message
+[**messageSendGeneralMessage**](MessageApi.md#messageSendGeneralMessage) | **POST** /v4/message/send/general | Send general message
+[**messageSendOrderCancelConfirmedMessage**](MessageApi.md#messageSendOrderCancelConfirmedMessage) | **POST** /v4/message/send/confirmcancelorder | Send order cancel confirmation message
+[**messageSendOrderCancelDeniedMessage**](MessageApi.md#messageSendOrderCancelDeniedMessage) | **POST** /v4/message/send/denycancelorder | Send order cancel denial message
+[**messageSendOrderCancelMessage**](MessageApi.md#messageSendOrderCancelMessage) | **POST** /v4/message/send/cancelorder | Send order cancellation message
+[**messageSendOrderMessage**](MessageApi.md#messageSendOrderMessage) | **POST** /v4/message/send/order | Send order message
+[**messageSendOrderRejectedMessage**](MessageApi.md#messageSendOrderRejectedMessage) | **POST** /v4/message/send/rejectorder | Send order rejected message
+[**messageSendQueryMessage**](MessageApi.md#messageSendQueryMessage) | **POST** /v4/message/send/query | Send query message
 
 
 # **messageConfirmMessages**

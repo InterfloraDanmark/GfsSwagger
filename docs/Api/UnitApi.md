@@ -4,8 +4,8 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**unitGetAll**](UnitApi.md#unitGetAll) | **GET** /v3/unit | Get all units
-[**unitGetById**](UnitApi.md#unitGetById) | **GET** /v3/unit/{unitID} | Get unit by ID
+[**unitGetAll**](UnitApi.md#unitGetAll) | **GET** /v4/unit | Get all units
+[**unitGetById**](UnitApi.md#unitGetById) | **GET** /v4/unit/{unitID} | Get unit by ID
 
 
 # **unitGetAll**
@@ -74,7 +74,7 @@ $apiInstance = new Swagger\Client\Api\UnitApi(
     new GuzzleHttp\Client(),
     $config
 );
-$unit_id = 56; // int | 
+$unit_id = 56; // int |
 
 try {
     $result = $apiInstance->unitGetById($unit_id);

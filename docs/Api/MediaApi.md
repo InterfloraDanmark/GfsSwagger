@@ -4,9 +4,9 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mediaDelete**](MediaApi.md#mediaDelete) | **DELETE** /v3/media/{mediaID} | Delete one image
-[**mediaGetById**](MediaApi.md#mediaGetById) | **GET** /v3/media/{mediaID} | Get media by ID
-[**mediaUpload**](MediaApi.md#mediaUpload) | **POST** /v3/media | Upload one or more images
+[**mediaDelete**](MediaApi.md#mediaDelete) | **DELETE** /v4/media/{mediaID} | Delete one image
+[**mediaGetById**](MediaApi.md#mediaGetById) | **GET** /v4/media/{mediaID} | Get media by ID
+[**mediaUpload**](MediaApi.md#mediaUpload) | **POST** /v4/media | Upload one or more images
 
 
 # **mediaDelete**

@@ -4,10 +4,10 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**provinceDelete**](ProvinceApi.md#provinceDelete) | **DELETE** /v3/province/{provinceID} | Delete province
-[**provinceGetByCountry**](ProvinceApi.md#provinceGetByCountry) | **GET** /v3/province/country/{countryCode} | Get provinces of a country
-[**provinceGetById**](ProvinceApi.md#provinceGetById) | **GET** /v3/province/{provinceID} | Get province by ID
-[**provinceSave**](ProvinceApi.md#provinceSave) | **POST** /v3/province | Create or update province
+[**provinceDelete**](ProvinceApi.md#provinceDelete) | **DELETE** /v4/province/{provinceID} | Delete province
+[**provinceGetByCountry**](ProvinceApi.md#provinceGetByCountry) | **GET** /v4/province/country/{countryCode} | Get provinces of a country
+[**provinceGetById**](ProvinceApi.md#provinceGetById) | **GET** /v4/province/{provinceID} | Get province by ID
+[**provinceSave**](ProvinceApi.md#provinceSave) | **POST** /v4/province | Create or update province
 
 
 # **provinceDelete**

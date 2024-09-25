@@ -82,58 +82,58 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CategoryApi* | [**categoryGetAll**](docs/Api/CategoryApi.md#categorygetall) | **GET** /v3/category | Get all product categories
-*CategoryApi* | [**categoryGetById**](docs/Api/CategoryApi.md#categorygetbyid) | **GET** /v3/category/{categoryID} | Get product category by ID
-*CountryApi* | [**countryGetAll**](docs/Api/CountryApi.md#countrygetall) | **GET** /v3/country | Get all countries
-*CountryApi* | [**countryGetById**](docs/Api/CountryApi.md#countrygetbyid) | **GET** /v3/country/{countryID} | Get country by ID
-*CountryApi* | [**countryGetByUnit**](docs/Api/CountryApi.md#countrygetbyunit) | **GET** /v3/country/unit/{unitID} | Get countries of a unit
-*CountryInfoTextApi* | [**countryInfoTextGetTranslatedCountryInfoTexts**](docs/Api/CountryInfoTextApi.md#countryinfotextgettranslatedcountryinfotexts) | **GET** /v3/countryinfo/country/{countryCode} | Get translated country info texts for one country.
-*CountryInfoTextApi* | [**countryInfoTextGetTranslatedCountryInfoTextsByType**](docs/Api/CountryInfoTextApi.md#countryinfotextgettranslatedcountryinfotextsbytype) | **GET** /v3/countryinfo/country/{countryCode}/type/{type} | Get the translated country info text for one country of requested info text type.
-*CountryInfoTextApi* | [**countryInfoTextReplaceCountryInfoTexts**](docs/Api/CountryInfoTextApi.md#countryinfotextreplacecountryinfotexts) | **POST** /v3/countryinfo/country/{countryCode} | Replace translated country info texts.
-*CountryInfoTextApi* | [**countryInfoTextSaveCountryInfoText**](docs/Api/CountryInfoTextApi.md#countryinfotextsavecountryinfotext) | **POST** /v3/countryinfo | Update or save a single translated country info text by country and type, leaving other types of same country untouched.
-*CurrencyApi* | [**currencyGetTranslatedCurrencies**](docs/Api/CurrencyApi.md#currencygettranslatedcurrencies) | **GET** /v3/currency/{country}/{language} | Get translated currencies and rates, according to client IP&#39;s country and receiving country
-*HolidayApi* | [**holidayDelete**](docs/Api/HolidayApi.md#holidaydelete) | **DELETE** /v3/holiday/{holidayID} | Delete holiday
-*HolidayApi* | [**holidayGetByCountry**](docs/Api/HolidayApi.md#holidaygetbycountry) | **GET** /v3/holiday/country/{countryCode} | Get holidays by country
-*HolidayApi* | [**holidayGetById**](docs/Api/HolidayApi.md#holidaygetbyid) | **GET** /v3/holiday/{id} | Get holiday by ID
-*HolidayApi* | [**holidaySave**](docs/Api/HolidayApi.md#holidaysave) | **POST** /v3/holiday | Save holiday
-*MediaApi* | [**mediaDelete**](docs/Api/MediaApi.md#mediadelete) | **DELETE** /v3/media/{mediaID} | Delete one image
-*MediaApi* | [**mediaGetById**](docs/Api/MediaApi.md#mediagetbyid) | **GET** /v3/media/{mediaID} | Get media by ID
-*MediaApi* | [**mediaUpload**](docs/Api/MediaApi.md#mediaupload) | **POST** /v3/media | Upload one or more images
-*MemberApi* | [**memberDelete**](docs/Api/MemberApi.md#memberdelete) | **DELETE** /v3/member/{memberID} | Delete member
-*MemberApi* | [**memberGetByCountry**](docs/Api/MemberApi.md#membergetbycountry) | **GET** /v3/member/country/{countryCode} | Get all members of a country
-*MemberApi* | [**memberGetById**](docs/Api/MemberApi.md#membergetbyid) | **GET** /v3/member/{memberID} | Get member by ID
-*MemberApi* | [**memberSave**](docs/Api/MemberApi.md#membersave) | **POST** /v3/member | Create or update member
-*MessageApi* | [**messageConfirmMessages**](docs/Api/MessageApi.md#messageconfirmmessages) | **POST** /v3/message/confirm | Confirm messages
-*MessageApi* | [**messageGetMessages**](docs/Api/MessageApi.md#messagegetmessages) | **POST** /v3/message/get | Retrieve messages
-*MessageApi* | [**messageGetMessagesWithExtendedOrderItem**](docs/Api/MessageApi.md#messagegetmessageswithextendedorderitem) | **POST** /v3/message/get/extendedOrderItem | Receive messages with extended order item. Responses containing messages of type &#39;OrderMessages&#39; include additional information about the ordered products.
-*MessageApi* | [**messageSendBackchargeConfirmationMessage**](docs/Api/MessageApi.md#messagesendbackchargeconfirmationmessage) | **POST** /v3/message/send/confirmbackcharge | Send backcharge confirmation
-*MessageApi* | [**messageSendBackchargeDeniedMessage**](docs/Api/MessageApi.md#messagesendbackchargedeniedmessage) | **POST** /v3/message/send/denybackcharge | Send backcharge denial
-*MessageApi* | [**messageSendBackchargeMessage**](docs/Api/MessageApi.md#messagesendbackchargemessage) | **POST** /v3/message/send/backcharge | Send backcharge message
-*MessageApi* | [**messageSendDeliveryConfirmedMessage**](docs/Api/MessageApi.md#messagesenddeliveryconfirmedmessage) | **POST** /v3/message/send/confirmdelivery | Send delivery confirmation
-*MessageApi* | [**messageSendFloralChequeCanceledMessage**](docs/Api/MessageApi.md#messagesendfloralchequecanceledmessage) | **POST** /v3/message/send/cancelfloralcheque | Send floral cheque cancel message
-*MessageApi* | [**messageSendFloralChequeMessage**](docs/Api/MessageApi.md#messagesendfloralchequemessage) | **POST** /v3/message/send/floralcheque | Send floral cheque message
-*MessageApi* | [**messageSendGeneralMessage**](docs/Api/MessageApi.md#messagesendgeneralmessage) | **POST** /v3/message/send/general | Send general message
-*MessageApi* | [**messageSendOrderCancelConfirmedMessage**](docs/Api/MessageApi.md#messagesendordercancelconfirmedmessage) | **POST** /v3/message/send/confirmcancelorder | Send order cancel confirmation message
-*MessageApi* | [**messageSendOrderCancelDeniedMessage**](docs/Api/MessageApi.md#messagesendordercanceldeniedmessage) | **POST** /v3/message/send/denycancelorder | Send order cancel denial message
-*MessageApi* | [**messageSendOrderCancelMessage**](docs/Api/MessageApi.md#messagesendordercancelmessage) | **POST** /v3/message/send/cancelorder | Send order cancellation message
-*MessageApi* | [**messageSendOrderMessage**](docs/Api/MessageApi.md#messagesendordermessage) | **POST** /v3/message/send/order | Send order message
-*MessageApi* | [**messageSendOrderRejectedMessage**](docs/Api/MessageApi.md#messagesendorderrejectedmessage) | **POST** /v3/message/send/rejectorder | Send order rejected message
-*MessageApi* | [**messageSendQueryMessage**](docs/Api/MessageApi.md#messagesendquerymessage) | **POST** /v3/message/send/query | Send query message
-*ProductApi* | [**productDelete**](docs/Api/ProductApi.md#productdelete) | **DELETE** /v3/product/{productID} | Delete product
-*ProductApi* | [**productGetAll**](docs/Api/ProductApi.md#productgetall) | **GET** /v3/product | Get all products
-*ProductApi* | [**productGetByCountry**](docs/Api/ProductApi.md#productgetbycountry) | **GET** /v3/product/country/{countryCode} | Get products of a country
-*ProductApi* | [**productGetById**](docs/Api/ProductApi.md#productgetbyid) | **GET** /v3/product/{productID} | Get product by ID
-*ProductApi* | [**productSave**](docs/Api/ProductApi.md#productsave) | **POST** /v3/product | Create or update product
-*ProvinceApi* | [**provinceDelete**](docs/Api/ProvinceApi.md#provincedelete) | **DELETE** /v3/province/{provinceID} | Delete province
-*ProvinceApi* | [**provinceGetByCountry**](docs/Api/ProvinceApi.md#provincegetbycountry) | **GET** /v3/province/country/{countryCode} | Get provinces of a country
-*ProvinceApi* | [**provinceGetById**](docs/Api/ProvinceApi.md#provincegetbyid) | **GET** /v3/province/{provinceID} | Get province by ID
-*ProvinceApi* | [**provinceSave**](docs/Api/ProvinceApi.md#provincesave) | **POST** /v3/province | Create or update province
-*RegionApi* | [**regionDelete**](docs/Api/RegionApi.md#regiondelete) | **DELETE** /v3/region/{regionID} | Delete region
-*RegionApi* | [**regionGetByCountry**](docs/Api/RegionApi.md#regiongetbycountry) | **GET** /v3/region/country/{countryCode} | Get regions of a country
-*RegionApi* | [**regionGetById**](docs/Api/RegionApi.md#regiongetbyid) | **GET** /v3/region/{regionID} | Get region by ID
-*RegionApi* | [**regionSave**](docs/Api/RegionApi.md#regionsave) | **POST** /v3/region | Create or update region
-*UnitApi* | [**unitGetAll**](docs/Api/UnitApi.md#unitgetall) | **GET** /v3/unit | Get all units
-*UnitApi* | [**unitGetById**](docs/Api/UnitApi.md#unitgetbyid) | **GET** /v3/unit/{unitID} | Get unit by ID
+*CategoryApi* | [**categoryGetAll**](docs/Api/CategoryApi.md#categorygetall) | **GET** /v4/category | Get all product categories
+*CategoryApi* | [**categoryGetById**](docs/Api/CategoryApi.md#categorygetbyid) | **GET** /v4/category/{categoryID} | Get product category by ID
+*CountryApi* | [**countryGetAll**](docs/Api/CountryApi.md#countrygetall) | **GET** /v4/country | Get all countries
+*CountryApi* | [**countryGetById**](docs/Api/CountryApi.md#countrygetbyid) | **GET** /v4/country/{countryID} | Get country by ID
+*CountryApi* | [**countryGetByUnit**](docs/Api/CountryApi.md#countrygetbyunit) | **GET** /v4/country/unit/{unitID} | Get countries of a unit
+*CountryInfoTextApi* | [**countryInfoTextGetTranslatedCountryInfoTexts**](docs/Api/CountryInfoTextApi.md#countryinfotextgettranslatedcountryinfotexts) | **GET** /v4/countryinfo/country/{countryCode} | Get translated country info texts for one country.
+*CountryInfoTextApi* | [**countryInfoTextGetTranslatedCountryInfoTextsByType**](docs/Api/CountryInfoTextApi.md#countryinfotextgettranslatedcountryinfotextsbytype) | **GET** /v4/countryinfo/country/{countryCode}/type/{type} | Get the translated country info text for one country of requested info text type.
+*CountryInfoTextApi* | [**countryInfoTextReplaceCountryInfoTexts**](docs/Api/CountryInfoTextApi.md#countryinfotextreplacecountryinfotexts) | **POST** /v4/countryinfo/country/{countryCode} | Replace translated country info texts.
+*CountryInfoTextApi* | [**countryInfoTextSaveCountryInfoText**](docs/Api/CountryInfoTextApi.md#countryinfotextsavecountryinfotext) | **POST** /v4/countryinfo | Update or save a single translated country info text by country and type, leaving other types of same country untouched.
+*CurrencyApi* | [**currencyGetTranslatedCurrencies**](docs/Api/CurrencyApi.md#currencygettranslatedcurrencies) | **GET** /v4/currency/{country}/{language} | Get translated currencies and rates, according to client IP&#39;s country and receiving country
+*HolidayApi* | [**holidayDelete**](docs/Api/HolidayApi.md#holidaydelete) | **DELETE** /v4/holiday/{holidayID} | Delete holiday
+*HolidayApi* | [**holidayGetByCountry**](docs/Api/HolidayApi.md#holidaygetbycountry) | **GET** /v4/holiday/country/{countryCode} | Get holidays by country
+*HolidayApi* | [**holidayGetById**](docs/Api/HolidayApi.md#holidaygetbyid) | **GET** /v4/holiday/{id} | Get holiday by ID
+*HolidayApi* | [**holidaySave**](docs/Api/HolidayApi.md#holidaysave) | **POST** /v4/holiday | Save holiday
+*MediaApi* | [**mediaDelete**](docs/Api/MediaApi.md#mediadelete) | **DELETE** /v4/media/{mediaID} | Delete one image
+*MediaApi* | [**mediaGetById**](docs/Api/MediaApi.md#mediagetbyid) | **GET** /v4/media/{mediaID} | Get media by ID
+*MediaApi* | [**mediaUpload**](docs/Api/MediaApi.md#mediaupload) | **POST** /v4/media | Upload one or more images
+*MemberApi* | [**memberDelete**](docs/Api/MemberApi.md#memberdelete) | **DELETE** /v4/member/{memberID} | Delete member
+*MemberApi* | [**memberGetByCountry**](docs/Api/MemberApi.md#membergetbycountry) | **GET** /v4/member/country/{countryCode} | Get all members of a country
+*MemberApi* | [**memberGetById**](docs/Api/MemberApi.md#membergetbyid) | **GET** /v4/member/{memberID} | Get member by ID
+*MemberApi* | [**memberSave**](docs/Api/MemberApi.md#membersave) | **POST** /v4/member | Create or update member
+*MessageApi* | [**messageConfirmMessages**](docs/Api/MessageApi.md#messageconfirmmessages) | **POST** /v4/message/confirm | Confirm messages
+*MessageApi* | [**messageGetMessages**](docs/Api/MessageApi.md#messagegetmessages) | **POST** /v4/message/get | Retrieve messages
+*MessageApi* | [**messageGetMessagesWithExtendedOrderItem**](docs/Api/MessageApi.md#messagegetmessageswithextendedorderitem) | **POST** /v4/message/get/extendedOrderItem | Receive messages with extended order item. Responses containing messages of type &#39;OrderMessages&#39; include additional information about the ordered products.
+*MessageApi* | [**messageSendBackchargeConfirmationMessage**](docs/Api/MessageApi.md#messagesendbackchargeconfirmationmessage) | **POST** /v4/message/send/confirmbackcharge | Send backcharge confirmation
+*MessageApi* | [**messageSendBackchargeDeniedMessage**](docs/Api/MessageApi.md#messagesendbackchargedeniedmessage) | **POST** /v4/message/send/denybackcharge | Send backcharge denial
+*MessageApi* | [**messageSendBackchargeMessage**](docs/Api/MessageApi.md#messagesendbackchargemessage) | **POST** /v4/message/send/backcharge | Send backcharge message
+*MessageApi* | [**messageSendDeliveryConfirmedMessage**](docs/Api/MessageApi.md#messagesenddeliveryconfirmedmessage) | **POST** /v4/message/send/confirmdelivery | Send delivery confirmation
+*MessageApi* | [**messageSendFloralChequeCanceledMessage**](docs/Api/MessageApi.md#messagesendfloralchequecanceledmessage) | **POST** /v4/message/send/cancelfloralcheque | Send floral cheque cancel message
+*MessageApi* | [**messageSendFloralChequeMessage**](docs/Api/MessageApi.md#messagesendfloralchequemessage) | **POST** /v4/message/send/floralcheque | Send floral cheque message
+*MessageApi* | [**messageSendGeneralMessage**](docs/Api/MessageApi.md#messagesendgeneralmessage) | **POST** /v4/message/send/general | Send general message
+*MessageApi* | [**messageSendOrderCancelConfirmedMessage**](docs/Api/MessageApi.md#messagesendordercancelconfirmedmessage) | **POST** /v4/message/send/confirmcancelorder | Send order cancel confirmation message
+*MessageApi* | [**messageSendOrderCancelDeniedMessage**](docs/Api/MessageApi.md#messagesendordercanceldeniedmessage) | **POST** /v4/message/send/denycancelorder | Send order cancel denial message
+*MessageApi* | [**messageSendOrderCancelMessage**](docs/Api/MessageApi.md#messagesendordercancelmessage) | **POST** /v4/message/send/cancelorder | Send order cancellation message
+*MessageApi* | [**messageSendOrderMessage**](docs/Api/MessageApi.md#messagesendordermessage) | **POST** /v4/message/send/order | Send order message
+*MessageApi* | [**messageSendOrderRejectedMessage**](docs/Api/MessageApi.md#messagesendorderrejectedmessage) | **POST** /v4/message/send/rejectorder | Send order rejected message
+*MessageApi* | [**messageSendQueryMessage**](docs/Api/MessageApi.md#messagesendquerymessage) | **POST** /v4/message/send/query | Send query message
+*ProductApi* | [**productDelete**](docs/Api/ProductApi.md#productdelete) | **DELETE** /v4/product/{productID} | Delete product
+*ProductApi* | [**productGetAll**](docs/Api/ProductApi.md#productgetall) | **GET** /v4/product | Get all products
+*ProductApi* | [**productGetByCountry**](docs/Api/ProductApi.md#productgetbycountry) | **GET** /v4/product/country/{countryCode} | Get products of a country
+*ProductApi* | [**productGetById**](docs/Api/ProductApi.md#productgetbyid) | **GET** /v4/product/{productID} | Get product by ID
+*ProductApi* | [**productSave**](docs/Api/ProductApi.md#productsave) | **POST** /v4/product | Create or update product
+*ProvinceApi* | [**provinceDelete**](docs/Api/ProvinceApi.md#provincedelete) | **DELETE** /v4/province/{provinceID} | Delete province
+*ProvinceApi* | [**provinceGetByCountry**](docs/Api/ProvinceApi.md#provincegetbycountry) | **GET** /v4/province/country/{countryCode} | Get provinces of a country
+*ProvinceApi* | [**provinceGetById**](docs/Api/ProvinceApi.md#provincegetbyid) | **GET** /v4/province/{provinceID} | Get province by ID
+*ProvinceApi* | [**provinceSave**](docs/Api/ProvinceApi.md#provincesave) | **POST** /v4/province | Create or update province
+*RegionApi* | [**regionDelete**](docs/Api/RegionApi.md#regiondelete) | **DELETE** /v4/region/{regionID} | Delete region
+*RegionApi* | [**regionGetByCountry**](docs/Api/RegionApi.md#regiongetbycountry) | **GET** /v4/region/country/{countryCode} | Get regions of a country
+*RegionApi* | [**regionGetById**](docs/Api/RegionApi.md#regiongetbyid) | **GET** /v4/region/{regionID} | Get region by ID
+*RegionApi* | [**regionSave**](docs/Api/RegionApi.md#regionsave) | **POST** /v4/region | Create or update region
+*UnitApi* | [**unitGetAll**](docs/Api/UnitApi.md#unitgetall) | **GET** /v4/unit | Get all units
+*UnitApi* | [**unitGetById**](docs/Api/UnitApi.md#unitgetbyid) | **GET** /v4/unit/{unitID} | Get unit by ID
 
 
 ## Documentation For Models
@@ -187,8 +187,8 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: 
-- **Scopes**: 
+- **Authorization URL**:
+- **Scopes**:
  - **read:Item**: read items
  - **write:Item**: modify items
 

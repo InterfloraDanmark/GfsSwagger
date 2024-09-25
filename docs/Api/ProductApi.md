@@ -4,11 +4,11 @@ All URIs are relative to *https://www.floristgate.com/swan*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**productDelete**](ProductApi.md#productDelete) | **DELETE** /v3/product/{productID} | Delete product
-[**productGetAll**](ProductApi.md#productGetAll) | **GET** /v3/product | Get all products
-[**productGetByCountry**](ProductApi.md#productGetByCountry) | **GET** /v3/product/country/{countryCode} | Get products of a country
-[**productGetById**](ProductApi.md#productGetById) | **GET** /v3/product/{productID} | Get product by ID
-[**productSave**](ProductApi.md#productSave) | **POST** /v3/product | Create or update product
+[**productDelete**](ProductApi.md#productDelete) | **DELETE** /v4/product/{productID} | Delete product
+[**productGetAll**](ProductApi.md#productGetAll) | **GET** /v4/product | Get all products
+[**productGetByCountry**](ProductApi.md#productGetByCountry) | **GET** /v4/product/country/{countryCode} | Get products of a country
+[**productGetById**](ProductApi.md#productGetById) | **GET** /v4/product/{productID} | Get product by ID
+[**productSave**](ProductApi.md#productSave) | **POST** /v4/product | Create or update product
 
 
 # **productDelete**
@@ -178,7 +178,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     new GuzzleHttp\Client(),
     $config
 );
-$product_id = 56; // int | 
+$product_id = 56; // int |
 
 try {
     $result = $apiInstance->productGetById($product_id);
