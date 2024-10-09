@@ -1,6 +1,6 @@
 # Swagger\Client\CurrencyApi
 
-All URIs are relative to *https://www.floristgate.com/swan*
+All URIs are relative to *https://gfs-app-swanapi-test-we-003.azurewebsites.net/swan_api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **currencyGetTranslatedCurrencies**
-> \Swagger\Client\Model\Currency[] currencyGetTranslatedCurrencies($country, $language)
+> \Swagger\Client\Model\ModelCurrency[] currencyGetTranslatedCurrencies($country, $language, $date_from)
 
 Get translated currencies and rates, according to client IP's country and receiving country
 
@@ -28,9 +28,10 @@ $apiInstance = new Swagger\Client\Api\CurrencyApi(
 );
 $country = "country_example"; // string | The receiving country (i.e. the country chosen by the user in OnlineIDD GUI).
 $language = "language_example"; // string | The desired language of translated currency names. Falls back to english if translation not available.
+$date_from = "date_from_example"; // string | Update date to search from
 
 try {
-    $result = $apiInstance->currencyGetTranslatedCurrencies($country, $language);
+    $result = $apiInstance->currencyGetTranslatedCurrencies($country, $language, $date_from);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CurrencyApi->currencyGetTranslatedCurrencies: ', $e->getMessage(), PHP_EOL;
@@ -44,10 +45,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country** | **string**| The receiving country (i.e. the country chosen by the user in OnlineIDD GUI). |
  **language** | **string**| The desired language of translated currency names. Falls back to english if translation not available. |
+ **date_from** | **string**| Update date to search from | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Currency[]**](../Model/Currency.md)
+[**\Swagger\Client\Model\ModelCurrency[]**](../Model/ModelCurrency.md)
 
 ### Authorization
 

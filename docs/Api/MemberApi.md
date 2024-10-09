@@ -1,6 +1,6 @@
 # Swagger\Client\MemberApi
 
-All URIs are relative to *https://www.floristgate.com/swan*
+All URIs are relative to *https://gfs-app-swanapi-test-we-003.azurewebsites.net/swan_api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -61,7 +61,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **memberGetByCountry**
-> \Swagger\Client\Model\Member[] memberGetByCountry($country_code)
+> \Swagger\Client\Model\ModelMember[] memberGetByCountry($country_code, $date_from)
 
 Get all members of a country
 
@@ -80,9 +80,10 @@ $apiInstance = new Swagger\Client\Api\MemberApi(
     $config
 );
 $country_code = "country_code_example"; // string | Two-letter country code
+$date_from = "date_from_example"; // string | Update date to search from
 
 try {
-    $result = $apiInstance->memberGetByCountry($country_code);
+    $result = $apiInstance->memberGetByCountry($country_code, $date_from);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MemberApi->memberGetByCountry: ', $e->getMessage(), PHP_EOL;
@@ -95,10 +96,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country_code** | **string**| Two-letter country code |
+ **date_from** | **string**| Update date to search from | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Member[]**](../Model/Member.md)
+[**\Swagger\Client\Model\ModelMember[]**](../Model/ModelMember.md)
 
 ### Authorization
 
@@ -112,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **memberGetById**
-> \Swagger\Client\Model\Member memberGetById($member_id)
+> \Swagger\Client\Model\ModelMember memberGetById($member_id)
 
 Get member by ID
 
@@ -149,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Member**](../Model/Member.md)
+[**\Swagger\Client\Model\ModelMember**](../Model/ModelMember.md)
 
 ### Authorization
 
@@ -163,7 +165,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **memberSave**
-> \Swagger\Client\Model\Member memberSave($member)
+> \Swagger\Client\Model\ModelMember memberSave($member)
 
 Create or update member
 
@@ -181,7 +183,7 @@ $apiInstance = new Swagger\Client\Api\MemberApi(
     new GuzzleHttp\Client(),
     $config
 );
-$member = new \Swagger\Client\Model\Member(); // \Swagger\Client\Model\Member | A new or existing member
+$member = new \Swagger\Client\Model\ModelMember(); // \Swagger\Client\Model\ModelMember | A new or existing member
 
 try {
     $result = $apiInstance->memberSave($member);
@@ -196,11 +198,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **member** | [**\Swagger\Client\Model\Member**](../Model/Member.md)| A new or existing member |
+ **member** | [**\Swagger\Client\Model\ModelMember**](../Model/ModelMember.md)| A new or existing member |
 
 ### Return type
 
-[**\Swagger\Client\Model\Member**](../Model/Member.md)
+[**\Swagger\Client\Model\ModelMember**](../Model/ModelMember.md)
 
 ### Authorization
 
