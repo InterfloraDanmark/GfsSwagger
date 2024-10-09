@@ -1,12 +1,12 @@
 # Swagger\Client\MediaApi
 
-All URIs are relative to *https://www.floristgate.com/swan*
+All URIs are relative to *https://gfs-app-swanapi-test-we-003.azurewebsites.net/swan_api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mediaDelete**](MediaApi.md#mediaDelete) | **DELETE** /v3/media/{mediaID} | Delete one image
-[**mediaGetById**](MediaApi.md#mediaGetById) | **GET** /v3/media/{mediaID} | Get media by ID
-[**mediaUpload**](MediaApi.md#mediaUpload) | **POST** /v3/media | Upload one or more images
+[**mediaDelete**](MediaApi.md#mediaDelete) | **DELETE** /v4/media/{mediaID} | Delete one image
+[**mediaGetById**](MediaApi.md#mediaGetById) | **GET** /v4/media/{mediaID} | Get media by ID
+[**mediaUpload**](MediaApi.md#mediaUpload) | **POST** /v4/media | Upload one or more images
 
 
 # **mediaDelete**
@@ -60,7 +60,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mediaGetById**
-> \Swagger\Client\Model\Media mediaGetById($media_id)
+> \Swagger\Client\Model\ModelMedia mediaGetById($media_id)
 
 Get media by ID
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Media**](../Model/Media.md)
+[**\Swagger\Client\Model\ModelMedia**](../Model/ModelMedia.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mediaUpload**
-> \Swagger\Client\Model\Media[] mediaUpload($request)
+> \Swagger\Client\Model\ModelMedia[] mediaUpload($request)
 
 Upload one or more images
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Media[]**](../Model/Media.md)
+[**\Swagger\Client\Model\ModelMedia[]**](../Model/ModelMedia.md)
 
 ### Authorization
 

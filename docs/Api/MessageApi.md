@@ -1,29 +1,30 @@
 # Swagger\Client\MessageApi
 
-All URIs are relative to *https://www.floristgate.com/swan*
+All URIs are relative to *https://gfs-app-swanapi-test-we-003.azurewebsites.net/swan_api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**messageConfirmMessages**](MessageApi.md#messageConfirmMessages) | **POST** /v3/message/confirm | Confirm messages
-[**messageGetMessages**](MessageApi.md#messageGetMessages) | **POST** /v3/message/get | Retrieve messages
-[**messageGetMessagesWithExtendedOrderItem**](MessageApi.md#messageGetMessagesWithExtendedOrderItem) | **POST** /v3/message/get/extendedOrderItem | Receive messages with extended order item. Responses containing messages of type &#39;OrderMessages&#39; include additional information about the ordered products.
-[**messageSendBackchargeConfirmationMessage**](MessageApi.md#messageSendBackchargeConfirmationMessage) | **POST** /v3/message/send/confirmbackcharge | Send backcharge confirmation
-[**messageSendBackchargeDeniedMessage**](MessageApi.md#messageSendBackchargeDeniedMessage) | **POST** /v3/message/send/denybackcharge | Send backcharge denial
-[**messageSendBackchargeMessage**](MessageApi.md#messageSendBackchargeMessage) | **POST** /v3/message/send/backcharge | Send backcharge message
-[**messageSendDeliveryConfirmedMessage**](MessageApi.md#messageSendDeliveryConfirmedMessage) | **POST** /v3/message/send/confirmdelivery | Send delivery confirmation
-[**messageSendFloralChequeCanceledMessage**](MessageApi.md#messageSendFloralChequeCanceledMessage) | **POST** /v3/message/send/cancelfloralcheque | Send floral cheque cancel message
-[**messageSendFloralChequeMessage**](MessageApi.md#messageSendFloralChequeMessage) | **POST** /v3/message/send/floralcheque | Send floral cheque message
-[**messageSendGeneralMessage**](MessageApi.md#messageSendGeneralMessage) | **POST** /v3/message/send/general | Send general message
-[**messageSendOrderCancelConfirmedMessage**](MessageApi.md#messageSendOrderCancelConfirmedMessage) | **POST** /v3/message/send/confirmcancelorder | Send order cancel confirmation message
-[**messageSendOrderCancelDeniedMessage**](MessageApi.md#messageSendOrderCancelDeniedMessage) | **POST** /v3/message/send/denycancelorder | Send order cancel denial message
-[**messageSendOrderCancelMessage**](MessageApi.md#messageSendOrderCancelMessage) | **POST** /v3/message/send/cancelorder | Send order cancellation message
-[**messageSendOrderMessage**](MessageApi.md#messageSendOrderMessage) | **POST** /v3/message/send/order | Send order message
-[**messageSendOrderRejectedMessage**](MessageApi.md#messageSendOrderRejectedMessage) | **POST** /v3/message/send/rejectorder | Send order rejected message
-[**messageSendQueryMessage**](MessageApi.md#messageSendQueryMessage) | **POST** /v3/message/send/query | Send query message
+[**messageConfirmMessages**](MessageApi.md#messageConfirmMessages) | **POST** /v4/message/confirm | Confirm messages
+[**messageConfirmOrderMessage**](MessageApi.md#messageConfirmOrderMessage) | **POST** /v4/message/confirmorder | Confirm Order message
+[**messageGetMessages**](MessageApi.md#messageGetMessages) | **POST** /v4/message/get | Retrieve messages
+[**messageGetMessagesWithExtendedOrderItem**](MessageApi.md#messageGetMessagesWithExtendedOrderItem) | **POST** /v4/message/get/extendedOrderItem | Receive messages with extended order item. Responses containing messages of type &#39;OrderMessages&#39; include additional information about the ordered products.
+[**messageSendBackchargeConfirmationMessage**](MessageApi.md#messageSendBackchargeConfirmationMessage) | **POST** /v4/message/send/confirmbackcharge | Send backcharge confirmation
+[**messageSendBackchargeDeniedMessage**](MessageApi.md#messageSendBackchargeDeniedMessage) | **POST** /v4/message/send/denybackcharge | Send backcharge denial
+[**messageSendBackchargeMessage**](MessageApi.md#messageSendBackchargeMessage) | **POST** /v4/message/send/backcharge | Send backcharge message
+[**messageSendDeliveryConfirmedMessage**](MessageApi.md#messageSendDeliveryConfirmedMessage) | **POST** /v4/message/send/confirmdelivery | Send delivery confirmation
+[**messageSendFloristAssignedMessage**](MessageApi.md#messageSendFloristAssignedMessage) | **POST** /v4/message/send/floristassigned | Send Florist assignment
+[**messageSendGeneralMessage**](MessageApi.md#messageSendGeneralMessage) | **POST** /v4/message/send/general | Send general message
+[**messageSendOrderCancelConfirmedMessage**](MessageApi.md#messageSendOrderCancelConfirmedMessage) | **POST** /v4/message/send/confirmcancelorder | Send order cancel confirmation message
+[**messageSendOrderCancelDeniedMessage**](MessageApi.md#messageSendOrderCancelDeniedMessage) | **POST** /v4/message/send/denycancelorder | Send order cancel denial message
+[**messageSendOrderCancelMessage**](MessageApi.md#messageSendOrderCancelMessage) | **POST** /v4/message/send/cancelorder | Send order cancellation message
+[**messageSendOrderCancelMessageWithBackcharge**](MessageApi.md#messageSendOrderCancelMessageWithBackcharge) | **POST** /v4/message/send/cancelorderbackcharge | Send order cancellation message With Backcharge
+[**messageSendOrderMessage**](MessageApi.md#messageSendOrderMessage) | **POST** /v4/message/send/order | Send order message
+[**messageSendOrderRejectedMessage**](MessageApi.md#messageSendOrderRejectedMessage) | **POST** /v4/message/send/rejectorder | Send order rejected message
+[**messageSendQueryMessage**](MessageApi.md#messageSendQueryMessage) | **POST** /v4/message/send/query | Send query message
 
 
 # **messageConfirmMessages**
-> messageConfirmMessages($to_unit_message_i_ds)
+> messageConfirmMessages($to_unit_message_ids)
 
 Confirm messages
 
@@ -41,10 +42,10 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$to_unit_message_i_ds = array(new \Swagger\Client\Model\int[]()); // int[] | List of unit messages IDs to be confirmed
+$to_unit_message_ids = array(new \Swagger\Client\Model\int[]()); // int[] | List of unit messages IDs to be confirmed
 
 try {
-    $apiInstance->messageConfirmMessages($to_unit_message_i_ds);
+    $apiInstance->messageConfirmMessages($to_unit_message_ids);
 } catch (Exception $e) {
     echo 'Exception when calling MessageApi->messageConfirmMessages: ', $e->getMessage(), PHP_EOL;
 }
@@ -55,7 +56,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **to_unit_message_i_ds** | **int[]**| List of unit messages IDs to be confirmed |
+ **to_unit_message_ids** | **int[]**| List of unit messages IDs to be confirmed |
 
 ### Return type
 
@@ -72,8 +73,60 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **messageConfirmOrderMessage**
+> messageConfirmOrderMessage($to_unit_message_id, $executing_unit_order_number)
+
+Confirm Order message
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: adminAuthorization
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\MessageApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$to_unit_message_id = 56; // int | Message IDs to be confirmed
+$executing_unit_order_number = "executing_unit_order_number_example"; // string | 
+
+try {
+    $apiInstance->messageConfirmOrderMessage($to_unit_message_id, $executing_unit_order_number);
+} catch (Exception $e) {
+    echo 'Exception when calling MessageApi->messageConfirmOrderMessage: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **to_unit_message_id** | **int**| Message IDs to be confirmed |
+ **executing_unit_order_number** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[adminAuthorization](../../README.md#adminAuthorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **messageGetMessages**
-> \Swagger\Client\Model\MessageContainer messageGetMessages($filter)
+> \Swagger\Client\Model\ModelMessagesMessageContainer messageGetMessages($filter)
 
 Retrieve messages
 
@@ -91,7 +144,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$filter = new \Swagger\Client\Model\MessageFilter(); // \Swagger\Client\Model\MessageFilter | A MessageFilter object with filter criteria
+$filter = new \Swagger\Client\Model\ModelMessagesMessageFilter(); // \Swagger\Client\Model\ModelMessagesMessageFilter | A MessageFilter object with filter criteria
 
 try {
     $result = $apiInstance->messageGetMessages($filter);
@@ -106,11 +159,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**\Swagger\Client\Model\MessageFilter**](../Model/MessageFilter.md)| A MessageFilter object with filter criteria |
+ **filter** | [**\Swagger\Client\Model\ModelMessagesMessageFilter**](../Model/ModelMessagesMessageFilter.md)| A MessageFilter object with filter criteria |
 
 ### Return type
 
-[**\Swagger\Client\Model\MessageContainer**](../Model/MessageContainer.md)
+[**\Swagger\Client\Model\ModelMessagesMessageContainer**](../Model/ModelMessagesMessageContainer.md)
 
 ### Authorization
 
@@ -124,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageGetMessagesWithExtendedOrderItem**
-> \Swagger\Client\Model\MessageContainerExtended messageGetMessagesWithExtendedOrderItem($filter)
+> \Swagger\Client\Model\ModelMessagesMessageContainerExtended messageGetMessagesWithExtendedOrderItem($filter)
 
 Receive messages with extended order item. Responses containing messages of type 'OrderMessages' include additional information about the ordered products.
 
@@ -142,7 +195,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$filter = new \Swagger\Client\Model\MessageFilter(); // \Swagger\Client\Model\MessageFilter | A MessageFilter object with filter criteria
+$filter = new \Swagger\Client\Model\ModelMessagesMessageFilter(); // \Swagger\Client\Model\ModelMessagesMessageFilter | A MessageFilter object with filter criteria
 
 try {
     $result = $apiInstance->messageGetMessagesWithExtendedOrderItem($filter);
@@ -157,11 +210,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**\Swagger\Client\Model\MessageFilter**](../Model/MessageFilter.md)| A MessageFilter object with filter criteria |
+ **filter** | [**\Swagger\Client\Model\ModelMessagesMessageFilter**](../Model/ModelMessagesMessageFilter.md)| A MessageFilter object with filter criteria |
 
 ### Return type
 
-[**\Swagger\Client\Model\MessageContainerExtended**](../Model/MessageContainerExtended.md)
+[**\Swagger\Client\Model\ModelMessagesMessageContainerExtended**](../Model/ModelMessagesMessageContainerExtended.md)
 
 ### Authorization
 
@@ -175,7 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendBackchargeConfirmationMessage**
-> \Swagger\Client\Model\BackchargeConfirmedMessage messageSendBackchargeConfirmationMessage($message)
+> \Swagger\Client\Model\ModelMessagesBackchargeConfirmedMessage messageSendBackchargeConfirmationMessage($message)
 
 Send backcharge confirmation
 
@@ -193,7 +246,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\BackchargeConfirmedMessage(); // \Swagger\Client\Model\BackchargeConfirmedMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesBackchargeConfirmedMessage(); // \Swagger\Client\Model\ModelMessagesBackchargeConfirmedMessage | New message
 
 try {
     $result = $apiInstance->messageSendBackchargeConfirmationMessage($message);
@@ -208,11 +261,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\BackchargeConfirmedMessage**](../Model/BackchargeConfirmedMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesBackchargeConfirmedMessage**](../Model/ModelMessagesBackchargeConfirmedMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\BackchargeConfirmedMessage**](../Model/BackchargeConfirmedMessage.md)
+[**\Swagger\Client\Model\ModelMessagesBackchargeConfirmedMessage**](../Model/ModelMessagesBackchargeConfirmedMessage.md)
 
 ### Authorization
 
@@ -226,7 +279,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendBackchargeDeniedMessage**
-> \Swagger\Client\Model\BackchargeDeniedMessage messageSendBackchargeDeniedMessage($message)
+> \Swagger\Client\Model\ModelMessagesBackchargeDeniedMessage messageSendBackchargeDeniedMessage($message)
 
 Send backcharge denial
 
@@ -244,7 +297,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\BackchargeDeniedMessage(); // \Swagger\Client\Model\BackchargeDeniedMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesBackchargeDeniedMessage(); // \Swagger\Client\Model\ModelMessagesBackchargeDeniedMessage | New message
 
 try {
     $result = $apiInstance->messageSendBackchargeDeniedMessage($message);
@@ -259,11 +312,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\BackchargeDeniedMessage**](../Model/BackchargeDeniedMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesBackchargeDeniedMessage**](../Model/ModelMessagesBackchargeDeniedMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\BackchargeDeniedMessage**](../Model/BackchargeDeniedMessage.md)
+[**\Swagger\Client\Model\ModelMessagesBackchargeDeniedMessage**](../Model/ModelMessagesBackchargeDeniedMessage.md)
 
 ### Authorization
 
@@ -277,7 +330,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendBackchargeMessage**
-> \Swagger\Client\Model\BackchargeMessage messageSendBackchargeMessage($message)
+> \Swagger\Client\Model\ModelMessagesBackchargeMessage messageSendBackchargeMessage($message)
 
 Send backcharge message
 
@@ -295,7 +348,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\BackchargeMessage(); // \Swagger\Client\Model\BackchargeMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesBackchargeMessage(); // \Swagger\Client\Model\ModelMessagesBackchargeMessage | New message
 
 try {
     $result = $apiInstance->messageSendBackchargeMessage($message);
@@ -310,11 +363,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\BackchargeMessage**](../Model/BackchargeMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesBackchargeMessage**](../Model/ModelMessagesBackchargeMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\BackchargeMessage**](../Model/BackchargeMessage.md)
+[**\Swagger\Client\Model\ModelMessagesBackchargeMessage**](../Model/ModelMessagesBackchargeMessage.md)
 
 ### Authorization
 
@@ -328,7 +381,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendDeliveryConfirmedMessage**
-> \Swagger\Client\Model\DeliveryConfirmedMessage messageSendDeliveryConfirmedMessage($message)
+> \Swagger\Client\Model\ModelMessagesDeliveryConfirmedMessage messageSendDeliveryConfirmedMessage($message)
 
 Send delivery confirmation
 
@@ -346,7 +399,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\DeliveryConfirmedMessage(); // \Swagger\Client\Model\DeliveryConfirmedMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesDeliveryConfirmedMessage(); // \Swagger\Client\Model\ModelMessagesDeliveryConfirmedMessage | New message
 
 try {
     $result = $apiInstance->messageSendDeliveryConfirmedMessage($message);
@@ -361,11 +414,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\DeliveryConfirmedMessage**](../Model/DeliveryConfirmedMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesDeliveryConfirmedMessage**](../Model/ModelMessagesDeliveryConfirmedMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\DeliveryConfirmedMessage**](../Model/DeliveryConfirmedMessage.md)
+[**\Swagger\Client\Model\ModelMessagesDeliveryConfirmedMessage**](../Model/ModelMessagesDeliveryConfirmedMessage.md)
 
 ### Authorization
 
@@ -378,10 +431,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **messageSendFloralChequeCanceledMessage**
-> \Swagger\Client\Model\FloralChequeCanceledMessage messageSendFloralChequeCanceledMessage($message)
+# **messageSendFloristAssignedMessage**
+> \Swagger\Client\Model\ModelMessagesFloristAssignedMessage messageSendFloristAssignedMessage($message)
 
-Send floral cheque cancel message
+Send Florist assignment
 
 ### Example
 ```php
@@ -397,13 +450,13 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\FloralChequeCanceledMessage(); // \Swagger\Client\Model\FloralChequeCanceledMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesFloristAssignedMessage(); // \Swagger\Client\Model\ModelMessagesFloristAssignedMessage | New message
 
 try {
-    $result = $apiInstance->messageSendFloralChequeCanceledMessage($message);
+    $result = $apiInstance->messageSendFloristAssignedMessage($message);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MessageApi->messageSendFloralChequeCanceledMessage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MessageApi->messageSendFloristAssignedMessage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -412,62 +465,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\FloralChequeCanceledMessage**](../Model/FloralChequeCanceledMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesFloristAssignedMessage**](../Model/ModelMessagesFloristAssignedMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\FloralChequeCanceledMessage**](../Model/FloralChequeCanceledMessage.md)
-
-### Authorization
-
-[adminAuthorization](../../README.md#adminAuthorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **messageSendFloralChequeMessage**
-> \Swagger\Client\Model\FloralChequeMessage messageSendFloralChequeMessage($message)
-
-Send floral cheque message
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: adminAuthorization
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Swagger\Client\Api\MessageApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$message = new \Swagger\Client\Model\FloralChequeMessage(); // \Swagger\Client\Model\FloralChequeMessage | New message
-
-try {
-    $result = $apiInstance->messageSendFloralChequeMessage($message);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling MessageApi->messageSendFloralChequeMessage: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\FloralChequeMessage**](../Model/FloralChequeMessage.md)| New message |
-
-### Return type
-
-[**\Swagger\Client\Model\FloralChequeMessage**](../Model/FloralChequeMessage.md)
+[**\Swagger\Client\Model\ModelMessagesFloristAssignedMessage**](../Model/ModelMessagesFloristAssignedMessage.md)
 
 ### Authorization
 
@@ -481,7 +483,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendGeneralMessage**
-> \Swagger\Client\Model\GeneralMessage messageSendGeneralMessage($message)
+> \Swagger\Client\Model\ModelMessagesGeneralMessage messageSendGeneralMessage($message)
 
 Send general message
 
@@ -499,7 +501,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\GeneralMessage(); // \Swagger\Client\Model\GeneralMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesGeneralMessage(); // \Swagger\Client\Model\ModelMessagesGeneralMessage | New message
 
 try {
     $result = $apiInstance->messageSendGeneralMessage($message);
@@ -514,11 +516,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\GeneralMessage**](../Model/GeneralMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesGeneralMessage**](../Model/ModelMessagesGeneralMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\GeneralMessage**](../Model/GeneralMessage.md)
+[**\Swagger\Client\Model\ModelMessagesGeneralMessage**](../Model/ModelMessagesGeneralMessage.md)
 
 ### Authorization
 
@@ -532,7 +534,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendOrderCancelConfirmedMessage**
-> \Swagger\Client\Model\OrderCancellationConfirmedMessage messageSendOrderCancelConfirmedMessage($message)
+> \Swagger\Client\Model\ModelMessagesOrderCancellationConfirmedMessage messageSendOrderCancelConfirmedMessage($message)
 
 Send order cancel confirmation message
 
@@ -550,7 +552,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\OrderCancellationConfirmedMessage(); // \Swagger\Client\Model\OrderCancellationConfirmedMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesOrderCancellationConfirmedMessage(); // \Swagger\Client\Model\ModelMessagesOrderCancellationConfirmedMessage | New message
 
 try {
     $result = $apiInstance->messageSendOrderCancelConfirmedMessage($message);
@@ -565,11 +567,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\OrderCancellationConfirmedMessage**](../Model/OrderCancellationConfirmedMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesOrderCancellationConfirmedMessage**](../Model/ModelMessagesOrderCancellationConfirmedMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\OrderCancellationConfirmedMessage**](../Model/OrderCancellationConfirmedMessage.md)
+[**\Swagger\Client\Model\ModelMessagesOrderCancellationConfirmedMessage**](../Model/ModelMessagesOrderCancellationConfirmedMessage.md)
 
 ### Authorization
 
@@ -583,7 +585,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendOrderCancelDeniedMessage**
-> \Swagger\Client\Model\OrderCancellationDeniedMessage messageSendOrderCancelDeniedMessage($message)
+> \Swagger\Client\Model\ModelMessagesOrderCancellationDeniedMessage messageSendOrderCancelDeniedMessage($message)
 
 Send order cancel denial message
 
@@ -601,7 +603,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\OrderCancellationDeniedMessage(); // \Swagger\Client\Model\OrderCancellationDeniedMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesOrderCancellationDeniedMessage(); // \Swagger\Client\Model\ModelMessagesOrderCancellationDeniedMessage | New message
 
 try {
     $result = $apiInstance->messageSendOrderCancelDeniedMessage($message);
@@ -616,11 +618,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\OrderCancellationDeniedMessage**](../Model/OrderCancellationDeniedMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesOrderCancellationDeniedMessage**](../Model/ModelMessagesOrderCancellationDeniedMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\OrderCancellationDeniedMessage**](../Model/OrderCancellationDeniedMessage.md)
+[**\Swagger\Client\Model\ModelMessagesOrderCancellationDeniedMessage**](../Model/ModelMessagesOrderCancellationDeniedMessage.md)
 
 ### Authorization
 
@@ -634,7 +636,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendOrderCancelMessage**
-> \Swagger\Client\Model\OrderCancellationMessage messageSendOrderCancelMessage($message)
+> \Swagger\Client\Model\ModelMessagesOrderCancellationMessage messageSendOrderCancelMessage($message)
 
 Send order cancellation message
 
@@ -652,7 +654,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\OrderCancellationMessage(); // \Swagger\Client\Model\OrderCancellationMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesOrderCancellationMessage(); // \Swagger\Client\Model\ModelMessagesOrderCancellationMessage | New message
 
 try {
     $result = $apiInstance->messageSendOrderCancelMessage($message);
@@ -667,11 +669,62 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\OrderCancellationMessage**](../Model/OrderCancellationMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesOrderCancellationMessage**](../Model/ModelMessagesOrderCancellationMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\OrderCancellationMessage**](../Model/OrderCancellationMessage.md)
+[**\Swagger\Client\Model\ModelMessagesOrderCancellationMessage**](../Model/ModelMessagesOrderCancellationMessage.md)
+
+### Authorization
+
+[adminAuthorization](../../README.md#adminAuthorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **messageSendOrderCancelMessageWithBackcharge**
+> \Swagger\Client\Model\ModelMessagesOrderCancellationMessage messageSendOrderCancelMessageWithBackcharge($message)
+
+Send order cancellation message With Backcharge
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: adminAuthorization
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\MessageApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$message = new \Swagger\Client\Model\ModelMessagesOrderCancellationMessage(); // \Swagger\Client\Model\ModelMessagesOrderCancellationMessage | New message
+
+try {
+    $result = $apiInstance->messageSendOrderCancelMessageWithBackcharge($message);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MessageApi->messageSendOrderCancelMessageWithBackcharge: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **message** | [**\Swagger\Client\Model\ModelMessagesOrderCancellationMessage**](../Model/ModelMessagesOrderCancellationMessage.md)| New message |
+
+### Return type
+
+[**\Swagger\Client\Model\ModelMessagesOrderCancellationMessage**](../Model/ModelMessagesOrderCancellationMessage.md)
 
 ### Authorization
 
@@ -685,7 +738,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendOrderMessage**
-> \Swagger\Client\Model\OrderMessage messageSendOrderMessage($message)
+> \Swagger\Client\Model\ModelMessagesOrderMessage messageSendOrderMessage($message)
 
 Send order message
 
@@ -703,7 +756,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\OrderMessage(); // \Swagger\Client\Model\OrderMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesOrderMessage(); // \Swagger\Client\Model\ModelMessagesOrderMessage | New message
 
 try {
     $result = $apiInstance->messageSendOrderMessage($message);
@@ -718,11 +771,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\OrderMessage**](../Model/OrderMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesOrderMessage**](../Model/ModelMessagesOrderMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\OrderMessage**](../Model/OrderMessage.md)
+[**\Swagger\Client\Model\ModelMessagesOrderMessage**](../Model/ModelMessagesOrderMessage.md)
 
 ### Authorization
 
@@ -736,7 +789,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendOrderRejectedMessage**
-> \Swagger\Client\Model\OrderRejectedMessage messageSendOrderRejectedMessage($message)
+> \Swagger\Client\Model\ModelMessagesOrderRejectedMessage messageSendOrderRejectedMessage($message)
 
 Send order rejected message
 
@@ -754,7 +807,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\OrderRejectedMessage(); // \Swagger\Client\Model\OrderRejectedMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesOrderRejectedMessage(); // \Swagger\Client\Model\ModelMessagesOrderRejectedMessage | New message
 
 try {
     $result = $apiInstance->messageSendOrderRejectedMessage($message);
@@ -769,11 +822,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\OrderRejectedMessage**](../Model/OrderRejectedMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesOrderRejectedMessage**](../Model/ModelMessagesOrderRejectedMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\OrderRejectedMessage**](../Model/OrderRejectedMessage.md)
+[**\Swagger\Client\Model\ModelMessagesOrderRejectedMessage**](../Model/ModelMessagesOrderRejectedMessage.md)
 
 ### Authorization
 
@@ -787,7 +840,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **messageSendQueryMessage**
-> \Swagger\Client\Model\QueryMessage messageSendQueryMessage($message)
+> \Swagger\Client\Model\ModelMessagesQueryMessage messageSendQueryMessage($message)
 
 Send query message
 
@@ -805,7 +858,7 @@ $apiInstance = new Swagger\Client\Api\MessageApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message = new \Swagger\Client\Model\QueryMessage(); // \Swagger\Client\Model\QueryMessage | New message
+$message = new \Swagger\Client\Model\ModelMessagesQueryMessage(); // \Swagger\Client\Model\ModelMessagesQueryMessage | New message
 
 try {
     $result = $apiInstance->messageSendQueryMessage($message);
@@ -820,11 +873,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message** | [**\Swagger\Client\Model\QueryMessage**](../Model/QueryMessage.md)| New message |
+ **message** | [**\Swagger\Client\Model\ModelMessagesQueryMessage**](../Model/ModelMessagesQueryMessage.md)| New message |
 
 ### Return type
 
-[**\Swagger\Client\Model\QueryMessage**](../Model/QueryMessage.md)
+[**\Swagger\Client\Model\ModelMessagesQueryMessage**](../Model/ModelMessagesQueryMessage.md)
 
 ### Authorization
 

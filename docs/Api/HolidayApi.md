@@ -1,13 +1,14 @@
 # Swagger\Client\HolidayApi
 
-All URIs are relative to *https://www.floristgate.com/swan*
+All URIs are relative to *https://gfs-app-swanapi-test-we-003.azurewebsites.net/swan_api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**holidayDelete**](HolidayApi.md#holidayDelete) | **DELETE** /v3/holiday/{holidayID} | Delete holiday
-[**holidayGetByCountry**](HolidayApi.md#holidayGetByCountry) | **GET** /v3/holiday/country/{countryCode} | Get holidays by country
-[**holidayGetById**](HolidayApi.md#holidayGetById) | **GET** /v3/holiday/{id} | Get holiday by ID
-[**holidaySave**](HolidayApi.md#holidaySave) | **POST** /v3/holiday | Save holiday
+[**holidayDelete**](HolidayApi.md#holidayDelete) | **DELETE** /v4/holiday/{holidayID} | Delete holiday
+[**holidayGetAll**](HolidayApi.md#holidayGetAll) | **GET** /v4/holiday | Get all holidays
+[**holidayGetByCountry**](HolidayApi.md#holidayGetByCountry) | **GET** /v4/holiday/country/{countryCode} | Get effective holidays by country
+[**holidayGetById**](HolidayApi.md#holidayGetById) | **GET** /v4/holiday/{id} | Get holiday by ID
+[**holidaySave**](HolidayApi.md#holidaySave) | **POST** /v4/holiday | Save holiday
 
 
 # **holidayDelete**
@@ -60,10 +61,61 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **holidayGetByCountry**
-> \Swagger\Client\Model\Holiday[] holidayGetByCountry($country_code)
+# **holidayGetAll**
+> \Swagger\Client\Model\ModelHoliday[] holidayGetAll($date_from)
 
-Get holidays by country
+Get all holidays
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: adminAuthorization
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\HolidayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$date_from = "date_from_example"; // string | Update date to search from
+
+try {
+    $result = $apiInstance->holidayGetAll($date_from);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling HolidayApi->holidayGetAll: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **date_from** | **string**| Update date to search from | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ModelHoliday[]**](../Model/ModelHoliday.md)
+
+### Authorization
+
+[adminAuthorization](../../README.md#adminAuthorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **holidayGetByCountry**
+> \Swagger\Client\Model\ModelHoliday[] holidayGetByCountry($country_code, $date_from)
+
+Get effective holidays by country
 
 ### Example
 ```php
@@ -80,9 +132,10 @@ $apiInstance = new Swagger\Client\Api\HolidayApi(
     $config
 );
 $country_code = "country_code_example"; // string | The 2-letter country code.
+$date_from = "date_from_example"; // string | Update date to search from
 
 try {
-    $result = $apiInstance->holidayGetByCountry($country_code);
+    $result = $apiInstance->holidayGetByCountry($country_code, $date_from);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HolidayApi->holidayGetByCountry: ', $e->getMessage(), PHP_EOL;
@@ -95,10 +148,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country_code** | **string**| The 2-letter country code. |
+ **date_from** | **string**| Update date to search from | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Holiday[]**](../Model/Holiday.md)
+[**\Swagger\Client\Model\ModelHoliday[]**](../Model/ModelHoliday.md)
 
 ### Authorization
 
@@ -112,7 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **holidayGetById**
-> \Swagger\Client\Model\Holiday holidayGetById($id)
+> \Swagger\Client\Model\ModelHoliday holidayGetById($id)
 
 Get holiday by ID
 
@@ -149,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Holiday**](../Model/Holiday.md)
+[**\Swagger\Client\Model\ModelHoliday**](../Model/ModelHoliday.md)
 
 ### Authorization
 
@@ -163,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **holidaySave**
-> \Swagger\Client\Model\Holiday holidaySave($holiday)
+> \Swagger\Client\Model\ModelHoliday holidaySave($holiday)
 
 Save holiday
 
@@ -181,7 +235,7 @@ $apiInstance = new Swagger\Client\Api\HolidayApi(
     new GuzzleHttp\Client(),
     $config
 );
-$holiday = new \Swagger\Client\Model\Holiday(); // \Swagger\Client\Model\Holiday | The holiday object to be created or updated.
+$holiday = new \Swagger\Client\Model\ModelHoliday(); // \Swagger\Client\Model\ModelHoliday | The holiday object to be created or updated.
 
 try {
     $result = $apiInstance->holidaySave($holiday);
@@ -196,11 +250,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **holiday** | [**\Swagger\Client\Model\Holiday**](../Model/Holiday.md)| The holiday object to be created or updated. |
+ **holiday** | [**\Swagger\Client\Model\ModelHoliday**](../Model/ModelHoliday.md)| The holiday object to be created or updated. |
 
 ### Return type
 
-[**\Swagger\Client\Model\Holiday**](../Model/Holiday.md)
+[**\Swagger\Client\Model\ModelHoliday**](../Model/ModelHoliday.md)
 
 ### Authorization
 

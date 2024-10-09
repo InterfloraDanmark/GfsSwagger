@@ -1,15 +1,15 @@
 # Swagger\Client\CategoryApi
 
-All URIs are relative to *https://www.floristgate.com/swan*
+All URIs are relative to *https://gfs-app-swanapi-test-we-003.azurewebsites.net/swan_api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**categoryGetAll**](CategoryApi.md#categoryGetAll) | **GET** /v3/category | Get all product categories
-[**categoryGetById**](CategoryApi.md#categoryGetById) | **GET** /v3/category/{categoryID} | Get product category by ID
+[**categoryGetAll**](CategoryApi.md#categoryGetAll) | **GET** /v4/category | Get all product categories
+[**categoryGetById**](CategoryApi.md#categoryGetById) | **GET** /v4/category/{categoryID} | Get product category by ID
 
 
 # **categoryGetAll**
-> \Swagger\Client\Model\ProductCategory[] categoryGetAll()
+> \Swagger\Client\Model\ModelProductCategory[] categoryGetAll($date_from)
 
 Get all product categories
 
@@ -27,9 +27,10 @@ $apiInstance = new Swagger\Client\Api\CategoryApi(
     new GuzzleHttp\Client(),
     $config
 );
+$date_from = "date_from_example"; // string | Update date to search from
 
 try {
-    $result = $apiInstance->categoryGetAll();
+    $result = $apiInstance->categoryGetAll($date_from);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoryApi->categoryGetAll: ', $e->getMessage(), PHP_EOL;
@@ -38,11 +39,14 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **date_from** | **string**| Update date to search from | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ProductCategory[]**](../Model/ProductCategory.md)
+[**\Swagger\Client\Model\ModelProductCategory[]**](../Model/ModelProductCategory.md)
 
 ### Authorization
 
@@ -56,7 +60,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **categoryGetById**
-> \Swagger\Client\Model\ProductCategory categoryGetById($category_id)
+> \Swagger\Client\Model\ModelProductCategory categoryGetById($category_id)
 
 Get product category by ID
 
@@ -93,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProductCategory**](../Model/ProductCategory.md)
+[**\Swagger\Client\Model\ModelProductCategory**](../Model/ModelProductCategory.md)
 
 ### Authorization
 

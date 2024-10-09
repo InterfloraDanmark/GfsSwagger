@@ -1,13 +1,14 @@
 # Swagger\Client\RegionApi
 
-All URIs are relative to *https://www.floristgate.com/swan*
+All URIs are relative to *https://gfs-app-swanapi-test-we-003.azurewebsites.net/swan_api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**regionDelete**](RegionApi.md#regionDelete) | **DELETE** /v3/region/{regionID} | Delete region
-[**regionGetByCountry**](RegionApi.md#regionGetByCountry) | **GET** /v3/region/country/{countryCode} | Get regions of a country
-[**regionGetById**](RegionApi.md#regionGetById) | **GET** /v3/region/{regionID} | Get region by ID
-[**regionSave**](RegionApi.md#regionSave) | **POST** /v3/region | Create or update region
+[**regionDelete**](RegionApi.md#regionDelete) | **DELETE** /v4/region/{regionID} | Delete region
+[**regionGetAll**](RegionApi.md#regionGetAll) | **GET** /v4/region | Get all regions
+[**regionGetByCountry**](RegionApi.md#regionGetByCountry) | **GET** /v4/region/country/{countryCode} | Get regions of a country
+[**regionGetById**](RegionApi.md#regionGetById) | **GET** /v4/region/{regionID} | Get region by ID
+[**regionSave**](RegionApi.md#regionSave) | **POST** /v4/region | Create or update region
 
 
 # **regionDelete**
@@ -60,8 +61,59 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **regionGetAll**
+> \Swagger\Client\Model\ModelRegion[] regionGetAll($date_from)
+
+Get all regions
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: adminAuthorization
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\RegionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$date_from = "date_from_example"; // string | 
+
+try {
+    $result = $apiInstance->regionGetAll($date_from);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RegionApi->regionGetAll: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **date_from** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ModelRegion[]**](../Model/ModelRegion.md)
+
+### Authorization
+
+[adminAuthorization](../../README.md#adminAuthorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **regionGetByCountry**
-> \Swagger\Client\Model\Region[] regionGetByCountry($country_code)
+> \Swagger\Client\Model\ModelRegion[] regionGetByCountry($country_code, $date_from)
 
 Get regions of a country
 
@@ -80,9 +132,10 @@ $apiInstance = new Swagger\Client\Api\RegionApi(
     $config
 );
 $country_code = "country_code_example"; // string | Two letter country code
+$date_from = "date_from_example"; // string | 
 
 try {
-    $result = $apiInstance->regionGetByCountry($country_code);
+    $result = $apiInstance->regionGetByCountry($country_code, $date_from);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RegionApi->regionGetByCountry: ', $e->getMessage(), PHP_EOL;
@@ -95,10 +148,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country_code** | **string**| Two letter country code |
+ **date_from** | **string**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Region[]**](../Model/Region.md)
+[**\Swagger\Client\Model\ModelRegion[]**](../Model/ModelRegion.md)
 
 ### Authorization
 
@@ -112,7 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **regionGetById**
-> \Swagger\Client\Model\Region regionGetById($region_id)
+> \Swagger\Client\Model\ModelRegion regionGetById($region_id)
 
 Get region by ID
 
@@ -149,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Region**](../Model/Region.md)
+[**\Swagger\Client\Model\ModelRegion**](../Model/ModelRegion.md)
 
 ### Authorization
 
@@ -163,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **regionSave**
-> \Swagger\Client\Model\Province regionSave($region)
+> \Swagger\Client\Model\ModelProvince regionSave($region)
 
 Create or update region
 
@@ -181,7 +235,7 @@ $apiInstance = new Swagger\Client\Api\RegionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$region = new \Swagger\Client\Model\Region(); // \Swagger\Client\Model\Region | A new or existing region
+$region = new \Swagger\Client\Model\ModelRegion(); // \Swagger\Client\Model\ModelRegion | A new or existing region
 
 try {
     $result = $apiInstance->regionSave($region);
@@ -196,11 +250,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | [**\Swagger\Client\Model\Region**](../Model/Region.md)| A new or existing region |
+ **region** | [**\Swagger\Client\Model\ModelRegion**](../Model/ModelRegion.md)| A new or existing region |
 
 ### Return type
 
-[**\Swagger\Client\Model\Province**](../Model/Province.md)
+[**\Swagger\Client\Model\ModelProvince**](../Model/ModelProvince.md)
 
 ### Authorization
 

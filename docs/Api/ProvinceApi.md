@@ -1,13 +1,13 @@
 # Swagger\Client\ProvinceApi
 
-All URIs are relative to *https://www.floristgate.com/swan*
+All URIs are relative to *https://gfs-app-swanapi-test-we-003.azurewebsites.net/swan_api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**provinceDelete**](ProvinceApi.md#provinceDelete) | **DELETE** /v3/province/{provinceID} | Delete province
-[**provinceGetByCountry**](ProvinceApi.md#provinceGetByCountry) | **GET** /v3/province/country/{countryCode} | Get provinces of a country
-[**provinceGetById**](ProvinceApi.md#provinceGetById) | **GET** /v3/province/{provinceID} | Get province by ID
-[**provinceSave**](ProvinceApi.md#provinceSave) | **POST** /v3/province | Create or update province
+[**provinceDelete**](ProvinceApi.md#provinceDelete) | **DELETE** /v4/province/{provinceID} | Delete province
+[**provinceGetByCountry**](ProvinceApi.md#provinceGetByCountry) | **GET** /v4/province/country/{countryCode} | Get provinces of a country
+[**provinceGetById**](ProvinceApi.md#provinceGetById) | **GET** /v4/province/{provinceID} | Get province by ID
+[**provinceSave**](ProvinceApi.md#provinceSave) | **POST** /v4/province | Create or update province
 
 
 # **provinceDelete**
@@ -61,7 +61,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **provinceGetByCountry**
-> \Swagger\Client\Model\Province[] provinceGetByCountry($country_code)
+> \Swagger\Client\Model\ModelProvince[] provinceGetByCountry($country_code, $date_from)
 
 Get provinces of a country
 
@@ -80,9 +80,10 @@ $apiInstance = new Swagger\Client\Api\ProvinceApi(
     $config
 );
 $country_code = "country_code_example"; // string | Two letter country code
+$date_from = "date_from_example"; // string | The start date of a date period
 
 try {
-    $result = $apiInstance->provinceGetByCountry($country_code);
+    $result = $apiInstance->provinceGetByCountry($country_code, $date_from);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProvinceApi->provinceGetByCountry: ', $e->getMessage(), PHP_EOL;
@@ -95,10 +96,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country_code** | **string**| Two letter country code |
+ **date_from** | **string**| The start date of a date period | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Province[]**](../Model/Province.md)
+[**\Swagger\Client\Model\ModelProvince[]**](../Model/ModelProvince.md)
 
 ### Authorization
 
@@ -112,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **provinceGetById**
-> \Swagger\Client\Model\Province provinceGetById($province_id)
+> \Swagger\Client\Model\ModelProvince provinceGetById($province_id)
 
 Get province by ID
 
@@ -149,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Province**](../Model/Province.md)
+[**\Swagger\Client\Model\ModelProvince**](../Model/ModelProvince.md)
 
 ### Authorization
 
@@ -163,7 +165,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **provinceSave**
-> \Swagger\Client\Model\Province provinceSave($province)
+> \Swagger\Client\Model\ModelProvince provinceSave($province)
 
 Create or update province
 
@@ -181,7 +183,7 @@ $apiInstance = new Swagger\Client\Api\ProvinceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$province = new \Swagger\Client\Model\Province(); // \Swagger\Client\Model\Province | A new or existing province
+$province = new \Swagger\Client\Model\ModelProvince(); // \Swagger\Client\Model\ModelProvince | A new or existing province
 
 try {
     $result = $apiInstance->provinceSave($province);
@@ -196,11 +198,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **province** | [**\Swagger\Client\Model\Province**](../Model/Province.md)| A new or existing province |
+ **province** | [**\Swagger\Client\Model\ModelProvince**](../Model/ModelProvince.md)| A new or existing province |
 
 ### Return type
 
-[**\Swagger\Client\Model\Province**](../Model/Province.md)
+[**\Swagger\Client\Model\ModelProvince**](../Model/ModelProvince.md)
 
 ### Authorization
 
